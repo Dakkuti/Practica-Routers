@@ -1,9 +1,9 @@
 input{
     font-size: 1.2rem;
     width:  100%;
-  }
+}
   
-  .card{
+.card{
     box-sizing: content-box;
     border: 1px solid grey;
     margin-top: 2%;
@@ -15,7 +15,7 @@ input{
     width: 15rem ;
     display: inline-flex;
     height: 370px;
-  }
+}
   
   .card p{
     padding: 5px;
@@ -23,7 +23,7 @@ input{
     line-height: 15px;
   }
   
-  .card img{
+  .card .card-img-top{
     max-height: 200px;
     max-width: 400px;
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import '../styles/hero.css'
+import '../styles/hero.css';
 
 export const Heroes = () => {
     const [heroe, setHeroe] = useState([]);
@@ -20,13 +20,14 @@ export const Heroes = () => {
     return (
         <div>
             <h1>Súper Heroes</h1>
+            <hr />
             {
-                heroe.map(her =>(
-                    <div className="card" key={her.id}>
-                        <img className="card-img-top" src={her.image} alt="" />
+                heroe.map(hero =>(
+                    <div className="card" key={hero.id}>
+                        <img className="card-img-top" src={hero.image} alt="" />
                         <div className="card-body">
-                            <h5 className="card-title">{her.superhero}</h5>
-                            <p className="card-text">{her.alter_ego}</p>
+                            <h5 className="card-title">{hero.superhero}</h5>
+                            <p className="card-text">{hero.alter_ego}</p>
                         </div>
                     </div>
                 ))
