@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar } from './Navbar'
 import { useEffect, useState } from 'react';
-import '../styles.css/hero.css'
+import '../styles/hero.css'
 
 export const Heroes = () => {
     const [heroe, setHeroe] = useState([]);
