@@ -18,9 +18,6 @@ export const Navbar = () => {
                             <Link className="nav-link text-white" to="/">Inicio</Link>
                         </li>
 
-                        <li className="nav-item">
-                            <Link className="nav-link text-white" to="/Login">Login</Link>
-                        </li>
                     </ul>
                 </div>
             </div>
