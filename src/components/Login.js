@@ -53,7 +53,7 @@ export class Login extends Component {
             timer: 2000,
             backdrop: `
                 rgba(0,0,123,0.4)
-                url("https://media.giphy.com/media/qVID3J8fLrlZK/giphy.gif")
+                url("https://media.giphy.com/media/hRhCc5bbYh9w4/giphy.gif")
                 left top
                 no-repeat
               `
