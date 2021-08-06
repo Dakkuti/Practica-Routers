@@ -42,7 +42,6 @@ export class Login extends Component {
         return response.data;
       })
       .then((response) => {
-          console.log(response);
         if (response.length > 0) {
           var respuesta = response[0];
           Swal.fire({
