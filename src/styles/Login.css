@@ -46,6 +46,9 @@
     letter-spacing: -0.005em;
     color: #FFFFFE;
 }
+.link:hover{    
+    text-decoration: none;
+}
 
 @media (min-width: 728px){
     #contacto{
