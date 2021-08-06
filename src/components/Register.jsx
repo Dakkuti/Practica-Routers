@@ -3,6 +3,7 @@ import axios from "axios";
 import md5 from "md5";
 import uuid from "react-uuid"; // id aleatorio
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 import { Navbar } from "./Navbar";
 import '../styles/register.css'
@@ -49,7 +50,13 @@ export default class Registro extends Component {
         password: md5(this.state.form.password),
       })
       .then((response) => {
-        alert("Usuario Registrado");
+        Swal.fire({
+            title: 'Usuario registrado',
+            text: 'Genial ahora Logeate',
+            icon: 'success',
+            confirmButtonText: 'Continuar'
+          })
+        this.props.history.push("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -71,7 +78,7 @@ export default class Registro extends Component {
                 type="text"
                 className="form-control"
                 id="name"
-                name="name"
+                name="nombre"
                 aria-describedby="nameHelp"
                 onChange={this.handleChange}
               />
@@ -116,7 +123,7 @@ export default class Registro extends Component {
                 type="text"
                 className="form-control"
                 id="email"
-                name="email"
+                name="username"
                 aria-describedby="emailHelp"
                 onChange={this.handleChange}
               />

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import md5 from "md5";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
+
 
 import { Navbar } from "./Navbar";
 import "../styles/Login.css";
@@ -40,12 +42,29 @@ export class Login extends Component {
         return response.data;
       })
       .then((response) => {
+          console.log(response);
         if (response.length > 0) {
           var respuesta = response[0];
-          alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido_paterno}`);
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: `Bienvenido ${respuesta.nombre} ${respuesta.apellido_paterno}`,
+            showConfirmButton: false,
+            timer: 2000,
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("https://media.giphy.com/media/qVID3J8fLrlZK/giphy.gif")
+                left top
+                no-repeat
+              `
+          })
           this.props.history.push("/Heroes");
         } else {
-          alert("El usuario o la contraseña no son correctos");
+            Swal.fire({
+                title: 'Usuario o contraseña incorrectos',
+                icon: 'error',
+                confirmButtonText: 'Continuar'
+              })
         }
       })
       .catch((error) => {
@@ -94,7 +113,7 @@ export class Login extends Component {
               Ingresar
             </button>
             <Link
-                to="/"
+                to="/registro"
                 className="link mx-auto mt-4 text-white "
             >
                 Aún no te has registrado?
