@@ -7,12 +7,10 @@ import {
     } from "react-router-dom";
 
 
-import { Navbar } from "../components/Navbar";
-
 import { Login } from "../components/Login";
 import Register from "../components/Register";
-
 import { Heroes } from "../components/Heroes";
+
 export const AppRouter = () => {
     return (
         <Router>
